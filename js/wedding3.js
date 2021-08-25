@@ -27,11 +27,43 @@
 //     $(".ou_4").animate({top:slidePosition},400);
     
 // },3000);
-setInterval( function(){             
-    $(".g_2").delay("2500");        
-    $(".g_2").animate({marginTop:  "-10px" },"500");  
-    $(".g_2").delay("2500");                           
-    $(".g_2").animate({marginTop:  "-600px" },"500"); 
-    $(".g_2").delay("2500");                           
-    $(".g_2").animate({marginTop:  "0" },"500");       
-    });
+
+
+
+// setInterval( function(){             
+//     $(".g_2").delay("2500");        
+//     $(".g_2").animate({marginTop:  "-10px" },"500");  
+//     $(".g_2").delay("2500");                           
+//     $(".g_2").animate({marginTop:  "-600px" },"500"); 
+//     $(".g_2").delay("2500");                           
+//     $(".g_2").animate({marginTop:  "0" },"500");       
+//     });
+$(function(){
+    //dom ready
+    let idx=0,inter;
+    $('.g-3').on({
+        'mouseenter':function(){
+            idx = $(this).index();
+            g3();
+            clearInterval(inter);
+        },
+        'mouseleave':function(){
+            loop();
+        }
+    })
+    function loop(){
+        inter = setInterval(function(){
+            if(idx != 6){ idx++; } else {idx=0}
+            g3();
+        },1000)
+    }loop();
+    
+    function g3(){
+        $('.g-3').removeClass('active');
+        $('.g-3').eq(idx).addClass('active');
+    }
+
+
+    //end 
+})
+
