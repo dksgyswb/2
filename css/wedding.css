@@ -1,22 +1,22 @@
 
+
 @import url('common.css');
+main{overflow:hidden;}
 
 .logo-area img {
     background-color: #fff;
     border-radius: 70%;
-    position: fixed;
+    position: fixed; right:5%; bottom:6%;
     width: 7%;
-    margin-left: 88%;
-    margin-top: 14%;
     display: block;
     color: #888;
     text-decoration: none;
-    z-index:999;
+    z-index:99999999;
+    
 }
 img.infinite_rotating_logo{
     animation: rotate_image 10s linear infinite;
     transform-origin: 50% 50%;
-    
     /* max-width: 200px; */
 }
 
@@ -86,20 +86,43 @@ img.infinite_rotating_logo{
 .mySwiper{}
 .mySwiper .swiper-wrapper{position: relative;}
 .mySwiper .swiper-wrapper .swiper-slide{
-    position: absolute;
-    left:0; top:0;
+    position:relative;
     width:100%;
 }
 .mySwiper .swiper-wrapper .swiper-slide img{
     width:100%;
-    height: 100%;
-    /* object-fit: none; */
+    
+    object-fit: cover;
 }
-.mySwiper .swiper-wrapper .swiper-slide li{
-
+.mySwiper .swiper-wrapper .swiper-slide ul{
+    position:absolute;
+    top:50%; left:100px;
+    transform:translateY(-50%);
+    color: #000;
 }
-
-
+.slick-dots_1 {
+    overflow:hidden;
+    position:absolute;
+    text-align:left;
+    margin-top:-100px;
+    margin-left: 100px;
+}
+.slick-dots_1 li{
+    float:none;
+    display:inline-block;
+}
+.slick-dots_1 li button{
+    background:#ddd;
+    border:none;
+    font-size:0;
+    width:10px; height:10px;
+    border-radius: 50%;
+    padding:20px;
+    margin: 0 10px;
+}
+.slick-dots_1 li.slick-active button{
+    background:#bf8365;
+}
 /* 슬라이드 */
 /* .body-wrap {
     min-height: 100%;
@@ -107,22 +130,24 @@ img.infinite_rotating_logo{
 } */
 .t-2 {
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     background: #fff;
+    margin: 80px 0 80px 0 ;
 }
 .b-1 {
     left: 100%;
     right: auto;
 }
 .b-2 {
-    position:relative;
-    top: 780px;
+    position: absolute;
+    /* margin-top: 5%; */
+    margin-left: 30%;
+    /* top: 780px; */
     width: 100%;
     max-width: 800px;
     font-size: 0;
     word-spacing: 0;
     letter-spacing: 0;
-    margin: 0 auto;
     /* padding: 0 500px; */
     /* margin-bottom: -9%; */
 }
@@ -130,13 +155,16 @@ img.infinite_rotating_logo{
     position:absolute;
     width: fit-content;
     height: fit-content;
-    /* font-family: "WiseDidot", "Noto Serif KR"; */
-    font-family: "Crimson Text", "Noto Serif KR";
+    font-family: "WiseDidot", "Noto Serif KR";
+    /* font-family: "Crimson Text", "Noto Serif KR"; */
     font-size: 78px;
-    z-index: 5;
+    /* z-index: 5; */
+    margin-left: 25%;
+    margin-top: 10px;
+    /* margin-top: 30%; */
     /* top:40px; */
-    left:500px;
-    top: 1300px;
+    /* left:500px;
+    top: 1300px; */
 }
 .c-1 {
     font-family: "WiseDidot", "Noto Serif KR";
@@ -145,46 +173,50 @@ img.infinite_rotating_logo{
     letter-spacing: 1px;
     font-size: 0.8rem;
     position: relative;
-    left: 1000px;
-    top: 270px;
+    /* text-align: center; */
+    margin-left: 50%;
+    /* left: 1000px; */
+    /* top: 270px; */
     white-space: normal;
     width: 100%;
-    max-width: 1440px;
+    /* max-width: 1440px; */
 }
 .c-2 {
+    position: relative;
     max-width: 640px;
     line-height: 1.8;
     font-size: 1.1rem;
     color: #888;
-    margin-top: 25px;
-    position: relative;
-    left: 1000px;
-    top: 280px;
+    margin-left: 50%;
 }
 .c-3 {
     position: relative;
-    left: 1000px;
-    top: 280px;
-    margin-top: 25px;
+    /* left: 1000px;
+    top: 280px; */
+    margin-left: 50%;
+    /* margin-top: 25px; */
     font-size: 14px;
     color: #bf8365;
-    height: 46px;
+    /* height: 46px; */
     background: transparent;
     line-height: 90px;
     width: auto;
     text-align: center;
     cursor: pointer;
-    transition: 0.1s all cubic-bezier(0.07, 0.74, 0.58, 1);
+    /* transition: 0.1s all cubic-bezier(0.07, 0.74, 0.58, 1); */
     border: solid #bf8365;
     border-style: solid; 
     border-width: 1px; 
     padding: 18px; 
 }
 .t-4 {
+    overflow:hidden;
+    padding:140px 0 80px;
     background: #f7f5ef;
+    margin-top: 100px;
     text-align: center;
     position: relative;
-    top: 370px;
+    /* top: 370px; */
     box-sizing: border-box;
     font-family: "Crimson Text", "Noto Serif KR";
     transition-delay: 0s !important;
@@ -195,7 +227,7 @@ img.infinite_rotating_logo{
     font-size: 78px;
     z-index: 5;
     font-family: "WiseDidot", "Noto Serif KR";
-    padding: 140px 0px 80px;
+    padding: 0px 0px 80px;
 }
 .d-0 {
     position: relative;
@@ -271,8 +303,26 @@ img.infinite_rotating_logo{
     float: left;
 }
 .slick-dots {
-
+    overflow:hidden;
+    text-align:center;
+    margin-top:30px;
 }
+.slick-dots li{
+    float:none;
+    display:inline-block;
+}
+.slick-dots li button{
+    background:#ddd;
+    border:none;
+    font-size:0;
+    width:10px; height:10px;
+    border-radius: 50%;
+    padding:0;
+}
+.slick-dots li.slick-active button{
+    background:#bf8365;
+}
+.slick-current {color:#bf8365}
 .tabs {
     width: 100%;
     margin-bottom: 40px;
@@ -292,6 +342,12 @@ img.infinite_rotating_logo{
 .tabs .tab-item.selected {
     color: #bf8365;
     border-bottom: 1px solid #bf8365;
+}
+.vertical-line{
+    border-left:1px solid #bf8365;
+    position: absolute;
+    height: 70px;
+    bottom: 20px;
 }
 /* .slider-2 .slides-1{
     position: relative;
@@ -329,7 +385,7 @@ img.infinite_rotating_logo{
     
 }
 .ou-0 {
-    text-align: right;
+    text-align:center;
 }
 /* .ou-1 img {
     position: relative;
@@ -337,12 +393,12 @@ img.infinite_rotating_logo{
 .f-1 {
     font-family: "WiseDidot", "Noto Serif KR";
     font-size: 78px;
-    text-align: right;
+    text-align: center;
     /* position: relative; */
     /* padding: 0 20%; */
     position: relative;
-    top: 1050px;
-    right: 420px;
+    margin:0 0 0 40% ;
+    top: 780px;
 }
 .f-2 {
     font-size: 0.85rem;
@@ -351,9 +407,10 @@ img.infinite_rotating_logo{
     color: #888;
     /* padding: 0 900px; */
     position: relative;
-    top: 1070px;
-    left: 400px;
+    margin:0 0 0 40% ;
+    top: 800px;
     text-align: center;
+
 }
 .f-3 {
     position: relative;
@@ -361,8 +418,8 @@ img.infinite_rotating_logo{
     font-size: 14px;
     color: #bf8365;
     line-height: 90px;
-    top: 1070px;
-    right: 480px;
+    margin:0 0 0 40% ;
+    top: 800px;
     
     cursor: pointer;
     transition: 0.1s all cubic-bezier(0.07, 0.74, 0.58, 1);
@@ -396,7 +453,7 @@ img.infinite_rotating_logo{
 }
 .ou-1,.ou-2 {
     position: relative;
-    top: 300px;
+    top: 0px;
     display: flex;
     width: 100%;
     height: auto;
@@ -413,22 +470,20 @@ img.infinite_rotating_logo{
     margin-bottom: 10%;
     margin: 100px 0 59.7344px 70px;
 }
+.t-7{
+
+}
 .t-8{
     background-image: url(/IMG/3-1.jpg);
-    position: absolute;
+    /* position: absolute; */
     min-width: 100%;
-    min-height: 70%;
-    left: 50%;
-    /* top: 50%; */
-    transform: translate(-50%, -50%);
-    top: 2700px;
-    /* object-fit: fill; */
+    min-height: 700px;
+    left: 0%;
 }
 .t-9 {
     position: relative;
-	height:420px;
 	border-radius:7px;
-    margin-top: 70px;
+    margin-top: 140px;
 }
 .t-9 img {
     position: relative;
@@ -442,8 +497,6 @@ img.infinite_rotating_logo{
     position: relative;
     box-sizing: border-box;
     text-align: center;
-    height: 0;
-    top: 4700px;
 }
 .g-2 {
     position: relative;
@@ -452,16 +505,30 @@ img.infinite_rotating_logo{
     margin-top: 25px;
     margin-bottom: 70px;
     padding-left: 80px;
-    top: 1150px;
     color: #888;
 }
 .t-9 > a {
     text-align: left;
 }
-.g_4{
+.g-3{
+    position:relative;
+}
+.g-4{
 	position:relative;
-    width: 80%; margin:0 auto;
+    width: 100%; margin:0 auto;
     vertical-align:middle;
+    padding:20px 10% 10px 10%;
+}
+.g-5{
+    position:absolute; right:10%; top:30px;
+    transform: translateY(-50%);
+    display:none;
+}
+.g-3.active .g-4{
+    border-bottom:1px solid #000;
+}
+.g-3.active .g-5{
+    display:block;
 }
 .g_2{
     display:inline-block; 
@@ -494,27 +561,37 @@ img.infinite_rotating_logo{
     height: 274.84px;
     width: 343.55px;
 }
-.t-10 {
+/* .t-10 {
     position: relative;
-    height: 500px;
+    height: 100%;
     background: #f7f5ef;
-    /* padding: 150px 0; */
+    padding: 150px 0;
     text-align: center;
-    top: 1300px;
 }
 .t-11{
     position: relative;
-    top: 2000px;
+} */
+.t-10 {
+    position: relative;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;;
+    position: relative;
+    height: 100%;
+    background: #f7f5ef;
+    padding: 100px 0;
+    text-align: center;
+    margin-top: 200px;
 }
 .h-1 {
-    height: 480px;
+    height: 500px;
     background: #f7f5ef;
     padding: 150px 0;
     text-align: center;
 }
 .h-2 {
     position: relative;
-    margin: -250px 0 20px 0;
+    margin: -300px 0 20px 0;
     line-height: 1.8;
     font-size: 1.1rem;
     color: #888;
@@ -537,14 +614,11 @@ img.infinite_rotating_logo{
     cursor: pointer;
     transition: 0.1s all cubic-bezier(0.07, 0.74, 0.58, 1);
 }
-.t-10 {
-    height: 190px;
-    background: #fff;
-    border-top: 1px solid #ddd;
-}
+
 .t-11 {
     position: relative;
-    top: 1600px;
+    overflow:hidden;
+    margin-top: -280px;
 }
 .i-2 {
     width: 240px;
